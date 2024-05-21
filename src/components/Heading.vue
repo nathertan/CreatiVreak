@@ -9,8 +9,8 @@
         src="@assets/creatiVreak.svg"
         width="60"
       />
-      <h1 class="creati">Creati</h1>
-      <h1 class="vreak">Vreak</h1>
+      <h2 class="creati">Creati</h2>
+      <h2 class="vreak">Vreak</h2>
     </div>
 
     <div class="wrapper">
@@ -35,11 +35,12 @@ header {
     flex-direction: row;
     align-items: center;
     img {
-      margin-right: 10px;
+      margin-right: 0.75rem;
     }
 
-    h1 {
+    h2 {
       font-size: 1.7rem;
+      margin-bottom: 0.5rem;
     }
 
     .creati {
