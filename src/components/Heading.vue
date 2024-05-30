@@ -24,6 +24,11 @@
 
 <style lang="scss" scoped>
 header {
+  background: var(--color-background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 100px 0;
   width: 100%;
   display: flex;
   flex-direction: row;
