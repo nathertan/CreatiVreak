@@ -11,7 +11,6 @@ import PastProjects from '@/components/PastProjects.vue';
   <Hero />
   <AboutUs />
   <Testi />
-  <AboutUs />
   <PastProjects />
 </template>
 
