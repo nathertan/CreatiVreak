@@ -3,7 +3,7 @@
     <h2 class="sub-title">
       <div>Our<font color="#204C74">&nbsp;Past Projects</font></div>
     </h2>
-    <v-carousel show-arrows cycle :interval="3000">
+    <v-carousel show-arrows cycle :interval="3000" hide-delimiter-background>
       <template v-slot:prev="{ props }">
         <div @click="props.onClick">
           <img alt="Left chevron" src="@assets/chevron-left.svg" />
@@ -61,11 +61,22 @@
 }
 </style>
 <style>
-/* <-- remove scoped here if you have it*/
-.v-carousel__controls {
-  background: blue !important;
+.v-carousel__controls__item.v-btn.v-btn--icon {
+  background-color: var(--base-white) !important;
+  height: 10px !important;
+  width: 85px !important;
+  border-radius: 0 !important;
 }
-.v-carousel__controls__item {
-  color: red !important;
+
+.v-carousel__controls__item.v-btn.v-btn--icon.v-btn--active {
+  background-color: var(--base-blue) !important;
+}
+/* 
+.v-carousel__controls__item.v-btn.v-btn--icon:hover {
+  background-color: black !important; 
+} */
+
+.v-btn__content .v-icon {
+  display: none !important; /* Removes the default icon */
 }
 </style>
