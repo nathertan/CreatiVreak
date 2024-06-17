@@ -3,7 +3,13 @@
     <h2 class="sub-title">
       <div>Our<font color="#204C74">&nbsp;Past Projects</font></div>
     </h2>
-    <v-carousel show-arrows cycle :interval="3000" hide-delimiter-background>
+    <v-carousel
+      class="carousel"
+      show-arrows
+      cycle
+      :interval="3000"
+      hide-delimiter-background
+    >
       <template v-slot:prev="{ props }">
         <div @click="props.onClick">
           <img alt="Left chevron" src="@assets/chevron-left.svg" />
@@ -19,9 +25,19 @@
         class="item"
         :key="img"
         :data-index="'index'"
-        cover
       >
-        <img :src="img" alt="" class="item-img" />
+        <div class="item-wrapper" :class="{ 'item-wrapper-h': img.horizontal }">
+          <img
+            :src="img.src"
+            alt=""
+            class="item-img"
+            :class="{ 'item-img-h': img.horizontal }"
+          />
+          <div class="content" :class="{ 'content-v': !img.horizontal }">
+            <div class="item-wrapper-title">{{ img.title }}</div>
+            <div class="item-wrapper-desc">{{ img.description }}</div>
+          </div>
+        </div>
       </v-carousel-item>
     </v-carousel>
   </div>
@@ -38,6 +54,10 @@
   align-items: center;
 }
 
+.carousel {
+  margin-top: 3rem;
+}
+
 .container {
   position: absolute;
   list-style: none;
@@ -45,25 +65,59 @@
 }
 
 .item {
-  margin: auto;
+  margin: 2rem auto 0;
   opacity: 1;
 }
 
-.item-img {
-  height: 238px;
-  width: 160px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-top: 38px;
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  &-v {
+    margin-top: 5rem;
+  }
 }
 
-.v-carousel__controls {
+.item-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 5rem;
+
+  &-h {
+    margin-top: 3rem;
+  }
+
+  &-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--base-blue);
+  }
+  &-desc {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--base-black);
+    font-weight: 300;
+  }
+}
+
+.item-img {
+  height: 380px;
+  width: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  &-h {
+    height: 320px;
+    width: 480px;
+  }
 }
 </style>
 <style>
 .v-carousel__controls__item.v-btn.v-btn--icon {
   background-color: var(--base-white) !important;
-  height: 10px !important;
+  height: 7px !important;
   width: 85px !important;
   border-radius: 0 !important;
 }
@@ -75,8 +129,15 @@
 .v-carousel__controls__item.v-btn.v-btn--icon:hover {
   background-color: black !important; 
 } */
-
+.v-carousel__controls {
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 2px !important;
+}
 .v-btn__content .v-icon {
   display: none !important; /* Removes the default icon */
+}
+.v-carousel {
+  height: 560px !important;
 }
 </style>
