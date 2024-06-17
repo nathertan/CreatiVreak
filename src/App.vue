@@ -13,6 +13,7 @@ import JoinUs from './components/JoinUs.vue';
   <AboutUs />
   <Testi />
   <JoinUs />
+  <Testi />
   <PastProjects />
 </template>
 

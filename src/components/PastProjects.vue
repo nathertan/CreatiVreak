@@ -1,27 +1,43 @@
 <template>
-  <div class="past-projects">
+  <div class="past-projects yellow">
     <h2 class="sub-title">
-      <div>What did<font color="#FFD116">&nbsp;They&nbsp;</font>say?</div>
+      <div>Our<font color="#204C74">&nbsp;Past Projects</font></div>
     </h2>
-    <v-carousel show-arrows cycle :interval="3000">
+    <v-carousel
+      class="carousel"
+      show-arrows
+      cycle
+      :interval="3000"
+      hide-delimiter-background
+    >
       <template v-slot:prev="{ props }">
-        <v-btn color="success" variant="elevated" @click="props.onClick"
-          >Previous slide</v-btn
-        >
+        <div @click="props.onClick">
+          <img alt="Left chevron" src="@assets/chevron-left.svg" />
+        </div>
       </template>
       <template v-slot:next="{ props }">
-        <v-btn color="info" variant="elevated" @click="props.onClick"
-          >Next slide</v-btn
-        >
+        <div @click="props.onClick">
+          <img alt="Right chevron" src="@assets/chevron-right.svg" />
+        </div>
       </template>
       <v-carousel-item
         v-for="img in images"
         class="item"
         :key="img"
         :data-index="'index'"
-        cover
       >
-        <img :src="img" alt="" class="item-img" />
+        <div class="item-wrapper" :class="{ 'item-wrapper-h': img.horizontal }">
+          <img
+            :src="img.src"
+            alt=""
+            class="item-img"
+            :class="{ 'item-img-h': img.horizontal }"
+          />
+          <div class="content" :class="{ 'content-v': !img.horizontal }">
+            <div class="item-wrapper-title">{{ img.title }}</div>
+            <div class="item-wrapper-desc">{{ img.description }}</div>
+          </div>
+        </div>
       </v-carousel-item>
     </v-carousel>
   </div>
@@ -33,6 +49,13 @@
 .past-projects {
   padding: 80px 100px 0 100px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  margin-top: 3rem;
 }
 
 .container {
@@ -42,15 +65,79 @@
 }
 
 .item {
-  margin: auto;
+  margin: 2rem auto 0;
   opacity: 1;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  &-v {
+    margin-top: 5rem;
+  }
+}
+
+.item-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 5rem;
+
+  &-h {
+    margin-top: 3rem;
+  }
+
+  &-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--base-blue);
+  }
+  &-desc {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--base-black);
+    font-weight: 300;
+  }
+}
+
 .item-img {
-  height: 238px;
-  width: 160px;
+  height: 380px;
+  width: 220px;
   object-fit: cover;
   border-radius: 15px;
-  margin-top: 38px;
+  &-h {
+    height: 320px;
+    width: 480px;
+  }
+}
+</style>
+<style>
+.v-carousel__controls__item.v-btn.v-btn--icon {
+  background-color: var(--base-white) !important;
+  height: 7px !important;
+  width: 85px !important;
+  border-radius: 0 !important;
+}
+
+.v-carousel__controls__item.v-btn.v-btn--icon.v-btn--active {
+  background-color: var(--base-blue) !important;
+}
+/* 
+.v-carousel__controls__item.v-btn.v-btn--icon:hover {
+  background-color: black !important; 
+} */
+.v-carousel__controls {
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 2px !important;
+}
+.v-btn__content .v-icon {
+  display: none !important; /* Removes the default icon */
+}
+.v-carousel {
+  height: 560px !important;
 }
 </style>
