@@ -2,14 +2,14 @@
 
 <template>
   <div class="yellow">
-    <h1 class="title">About <font color="#204c74">CreatiVreak</font></h1>
-    <p class="subtitle">Lorem ipsum dolor sit amet consectetur. Tortor sit sit congue id in <br> malesuada. Id at quis egestas dolor egestas.</p>
+    <h1 class="title">Interested in Becoming our <font color="#204c74">Talent</font>?</h1>
+    <p class="subtitle">Contribute and create wonderful projects with us!</p>
     <div class="button-wa">
       <a href="https://www.google.com">
-        <img src="/img/hubungikami-default.png" 
-          onmouseover="this.src='/img/hubungikami-hover.png'"
-          onmouseout="this.src='/img/hubungikami-default.png'"
-          width="250"
+        <img src="/img/join-us-default.png" 
+          onmouseover="this.src='/img/join-us-hover.png'"
+          onmouseout="this.src='/img/join-us-default.png'"
+          height="67.19"
         />
       </a>
     </div>
@@ -18,7 +18,7 @@
 
 <style lang="scss" scoped>
 .yellow {
-  height: 38vh;
+  height: 34vh;
   /* background: var(--base-yellow); */
 }
 
