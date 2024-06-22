@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs.vue';
 import Testi from './components/Testi.vue';
 import PastProjects from '@/components/PastProjects.vue';
 import JoinUs from './components/JoinUs.vue';
+import ServicesWeProvide from './components/ServicesWeProvide.vue';
 </script>
 
 <template>
@@ -13,7 +14,7 @@ import JoinUs from './components/JoinUs.vue';
   <AboutUs />
   <Testi />
   <JoinUs />
-  <Testi />
+  <ServicesWeProvide />
   <PastProjects />
 </template>
 

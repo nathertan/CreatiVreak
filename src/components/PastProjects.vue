@@ -10,12 +10,12 @@
       :interval="3000"
       hide-delimiter-background
     >
-      <template v-slot:prev="{ props }">
+      <template #prev="{ props }">
         <div @click="props.onClick">
           <img alt="Left chevron" src="@assets/chevron-left.svg" />
         </div>
       </template>
-      <template v-slot:next="{ props }">
+      <template #next="{ props }">
         <div @click="props.onClick">
           <img alt="Right chevron" src="@assets/chevron-right.svg" />
         </div>
@@ -23,7 +23,7 @@
       <v-carousel-item
         v-for="img in images"
         class="item"
-        :key="img"
+        :key="img.title"
         :data-index="'index'"
       >
         <div class="item-wrapper" :class="{ 'item-wrapper-h': img.horizontal }">
@@ -75,7 +75,7 @@
   margin-top: 2rem;
 
   &-v {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 }
 
@@ -96,6 +96,7 @@
     color: var(--base-blue);
   }
   &-desc {
+    margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--base-black);
@@ -114,6 +115,7 @@
   }
 }
 </style>
+
 <style>
 .v-carousel__controls__item.v-btn.v-btn--icon {
   background-color: var(--base-white) !important;
