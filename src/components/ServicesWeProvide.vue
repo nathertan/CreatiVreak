@@ -23,7 +23,7 @@
 
   p {
     font-size: 1.3rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 }
 .image-container {

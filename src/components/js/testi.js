@@ -7,7 +7,7 @@ export default {
       index: 0,
       intervalId: null,
       images: ['/img/a.png', '/img/b.png', '/img/c.jpg', '/img/d.png'],
-      viewedCount: 3,
+      viewedCount: 2,
       duration: 2000,
       direction: 'left'
     }
