@@ -1,7 +1,27 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const scrollDirection = ref('up');
+const lastScroll = ref(0);
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScroll.value) {
+      scrollDirection.value = 'down';
+      lastScroll.value = window.scrollY;
+    } else {
+      scrollDirection.value = 'up';
+      lastScroll.value = window.scrollY;
+    }
+  });
+});
+</script>
 
 <template>
-  <header>
+  <header
+    :class="{
+      'header-hide': scrollDirection === 'down',
+    }"
+  >
     <div class="title">
       <img
         alt="CreatiVreak logo"
@@ -24,6 +44,7 @@
 
 <style lang="scss" scoped>
 header {
+  transition: top 0.5s ease-in-out;
   background: var(--color-background);
   position: fixed;
   top: 0;
@@ -62,26 +83,7 @@ header {
     gap: 100px;
   }
 }
-/* h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
+.header-hide {
+  top: -100px;
 }
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-} */
 </style>
