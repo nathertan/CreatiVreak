@@ -1,8 +1,6 @@
 <template>
   <div class="past-projects yellow">
-    <h2 class="sub-title">
-      <div>Our<font color="#204C74">&nbsp;Past Projects</font></div>
-    </h2>
+    <h2>Our<font color="#204C74">&nbsp;Past Projects</font></h2>
     <v-carousel
       class="carousel"
       show-arrows
@@ -35,7 +33,7 @@
           />
           <div class="content" :class="{ 'content-v': !img.horizontal }">
             <div class="item-wrapper-title">{{ img.title }}</div>
-            <div class="item-wrapper-desc">{{ img.description }}</div>
+            <p class="item-wrapper-desc">{{ img.description }}</p>
           </div>
         </div>
       </v-carousel-item>
@@ -47,7 +45,7 @@
 
 <style lang="scss" scoped>
 .past-projects {
-  padding: 80px 100px 0 100px;
+  padding: 8vh 100px 0 100px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -97,10 +95,7 @@
   }
   &-desc {
     margin-top: 2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
     color: var(--base-black);
-    font-weight: 300;
   }
 }
 

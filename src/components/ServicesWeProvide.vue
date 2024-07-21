@@ -22,7 +22,6 @@
   align-items: center;
 
   p {
-    font-size: 1.3rem;
     margin-top: 2rem;
   }
 }
