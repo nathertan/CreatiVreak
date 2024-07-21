@@ -2,7 +2,7 @@
 
 <template>
   <div class="yellow">
-    <h1 class="title">About <font color="#204c74">CreatiVreak</font></h1>
+    <h2 class="title">About <font color="#204c74">CreatiVreak</font></h2>
     <p class="subtitle">
       Lorem ipsum dolor sit amet consectetur. Tortor sit sit congue id in <br />
       malesuada. Id at quis egestas dolor egestas.

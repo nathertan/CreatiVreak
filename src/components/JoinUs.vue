@@ -2,9 +2,9 @@
 
 <template>
   <div class="yellow">
-    <h1 class="title">
+    <h2 class="title">
       Interested in Becoming our <font color="#204c74">Talent</font>?
-    </h1>
+    </h2>
     <p class="subtitle">Contribute and create wonderful projects with us!</p>
     <div class="button-wa">
       <a href="https://www.google.com">
