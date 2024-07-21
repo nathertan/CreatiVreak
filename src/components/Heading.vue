@@ -49,7 +49,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px 100px 0;
+  padding: 3vh 100px 0;
   width: 100%;
   display: flex;
   flex-direction: row;

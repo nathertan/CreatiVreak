@@ -2,11 +2,15 @@
 
 <template>
   <div class="yellow">
-    <h1 class="title">About <font color="#204c74">CreatiVreak</font></h1>
-    <p class="subtitle">Lorem ipsum dolor sit amet consectetur. Tortor sit sit congue id in <br> malesuada. Id at quis egestas dolor egestas.</p>
+    <h2 class="title">About <font color="#204c74">CreatiVreak</font></h2>
+    <p class="subtitle">
+      Lorem ipsum dolor sit amet consectetur. Tortor sit sit congue id in <br />
+      malesuada. Id at quis egestas dolor egestas.
+    </p>
     <div class="button-wa">
       <a href="https://www.google.com">
-        <img src="/img/hubungikami-default.png" 
+        <img
+          src="/img/hubungikami-default.png"
           onmouseover="this.src='/img/hubungikami-hover.png'"
           onmouseout="this.src='/img/hubungikami-default.png'"
           width="250"
@@ -17,27 +21,20 @@
 </template>
 
 <style lang="scss" scoped>
-.yellow {
-  height: 38vh;
-  /* background: var(--base-yellow); */
-}
-
-.title{
-  padding-top: 4.5vh;
-  padding-bottom: 3.5vh;
+.title {
+  padding-top: 8vh;
+  padding-bottom: 6vh;
   text-align: center;
 }
 
-.subtitle{
+.subtitle {
   text-align: center;
-  font-size: 1.3rem;
 }
 
-.button-wa{
-  padding-top: 3vh;
+.button-wa {
+  padding-top: 6vh;
+  padding-bottom: 8vh;
   text-align: center;
   transition: ease-in;
 }
-
-
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <div class="bg"></div>
   <div class="testi">
     <div class="sub-title">
       <h2>What did<font color="#FFD116"> They </font>say?</h2>
@@ -26,7 +27,22 @@
 <script src="./js/testi.js"></script>
 
 <style lang="scss" scoped>
+.bg {
+  z-index: 1;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    270deg,
+    rgba(241, 241, 241, 0) 0.13%,
+    rgba(241, 241, 241, 0.66) 8.55%,
+    rgba(241, 241, 241, 0.97) 18.73%,
+    #f1f1f1 22.81%
+  );
+}
 .sub-title {
+  position: absolute;
+  z-index: 2;
   h2 {
     padding-bottom: 2rem;
   }
@@ -37,14 +53,15 @@
 
 .testi {
   margin-top: 10rem;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   padding: 80px 100px 0 100px;
   height: 100vh;
 }
 
 .container {
-  /* position: absolute; */
+  position: absolute;
+  right: 80px;
   list-style: none;
   display: flex;
   transition: all 1s ease-in-out;
@@ -58,8 +75,8 @@
   opacity: 1;
   transition: all 1s ease-in-out;
   &-img {
-    width: 292px;
-    height: 327px;
+    width: 13vw;
+    height: 32vh;
     object-fit: cover;
     border-radius: 15px;
     margin-top: 38px;
@@ -70,8 +87,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 364px;
-    height: 504px;
+    width: 18vw;
+    height: 50vh;
     padding-top: 200px;
     background-color: #fff;
     border-radius: 54px;
@@ -93,15 +110,11 @@
 
 .list-enter-from {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateX(480px);
 }
 .list-leave-to {
   opacity: 0;
-  transform: translateX(-180px);
-}
-
-.list-leave-active {
-  position: absolute;
+  transform: translateX(-30px);
 }
 
 /* .list-move,
