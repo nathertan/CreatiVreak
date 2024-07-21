@@ -8,7 +8,7 @@ export default {
       intervalId: null,
       images: ['/img/a.png', '/img/b.png', '/img/c.jpg', '/img/d.png'],
       viewedCount: 2,
-      duration: 2000,
+      duration: 3500,
       direction: 'left'
     }
   },
@@ -35,15 +35,17 @@ export default {
     onEnter(el, done) {
       gsap.to(el, {
         opacity: 1,
-        delay: el.dataset.index * 0.15,
         onComplete: done
       })
     },
     onLeave(el, done) {
       gsap.to(el, {
         opacity: -1,
-        delay: el.dataset.index * 0.15,
-        onComplete: done
+        onComplete: async () => {
+          await this.$nextTick()
+          await new Promise(resolve => setTimeout(resolve, 2000))
+          done()
+        }
       })
     }
   },

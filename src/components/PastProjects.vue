@@ -5,7 +5,7 @@
       class="carousel"
       show-arrows
       cycle
-      :interval="3000"
+      :interval="4000"
       hide-delimiter-background
     >
       <template #prev="{ props }">
