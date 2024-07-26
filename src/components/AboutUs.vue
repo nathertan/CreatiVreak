@@ -1,11 +1,13 @@
 <script setup></script>
 
 <template>
-  <div class="yellow">
+  <div id="about-us" class="yellow">
     <h2 class="title">About <font color="#204c74">CreatiVreak</font></h2>
     <p class="subtitle">
-      Lorem ipsum dolor sit amet consectetur. Tortor sit sit congue id in <br />
-      malesuada. Id at quis egestas dolor egestas.
+      Welcome to Creativreak, where innovation meets imagination! We are a
+      dynamic creative agency dedicated to providing top-notch services in the
+      realm of creativity. Our mission is to empower both emerging ventures and
+      established businesses by advancing their digital promotional endeavors.
     </p>
     <div class="button-wa">
       <a href="https://www.google.com">
@@ -29,6 +31,8 @@
 
 .subtitle {
   text-align: center;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .button-wa {

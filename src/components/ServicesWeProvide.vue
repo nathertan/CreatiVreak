@@ -1,11 +1,12 @@
 <template>
-  <div class="past-projects">
+  <div id="our-services" class="service-provided">
     <h2>Services<font color="#FFD116">&nbsp;We&nbsp;</font>provide</h2>
     <p>Our excellent services that we provide</p>
     <div class="image-container">
       <div v-for="img in images" :key="img.title" class="image-content">
         <img :src="img.src" :alt="img.title" />
         <h3>{{ img.title }}</h3>
+        <p>{{ img.info }}</p>
       </div>
     </div>
   </div>
@@ -14,7 +15,7 @@
 <script src="./js/services-we-provide.js" />
 
 <style lang="scss" scoped>
-.past-projects {
+.service-provided {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,8 +38,8 @@
 
 .image-content {
   margin: 3rem;
-  width: 18.5rem;
-  height: 12rem;
+  width: 15vw;
+  height: 22vh;
   background-color: var(--base-yellow);
   display: flex;
   flex-direction: column;
@@ -46,16 +47,32 @@
   align-items: center;
   gap: 1rem;
   box-shadow: 2.879px 2.879px 15.691px 0px rgba(0, 0, 0, 0.25);
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
+  p {
+    display: none;
+    color: var(--base-yellow);
+    text-align: center;
+    padding: 0 2rem 1rem 2rem;
+  }
+  h3 {
+    text-align: center;
+  }
 
   &:hover {
     background-color: var(--base-blue);
     color: var(--base-yellow);
     h3 {
       color: var(--base-white);
+      display: none;
     }
     img {
       filter: invert(100%);
+      display: none;
+    }
+    p {
+      display: block;
+      color: var(--base-white);
+      font-size: 1.2rem;
     }
   }
 

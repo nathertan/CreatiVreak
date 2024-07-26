@@ -1,5 +1,5 @@
 <template>
-  <div class="past-projects yellow">
+  <div id="past-projects" class="past-projects yellow">
     <h2>Our<font color="#204C74">&nbsp;Past Projects</font></h2>
     <v-carousel
       class="carousel"

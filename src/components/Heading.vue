@@ -35,9 +35,9 @@ onMounted(() => {
 
     <div class="wrapper">
       <a>Home</a>
-      <a>Profile</a>
-      <a>Service</a>
-      <a>Portofolio</a>
+      <a href="#about-us">Profile</a>
+      <a href="#our-services">Service</a>
+      <a href="#past-projects">Portofolio</a>
     </div>
   </header>
 </template>
@@ -49,12 +49,13 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 3vh 100px 0;
+  padding: 3vh 100px 3vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  z-index: 3;
 
   .title {
     display: flex;
@@ -81,9 +82,12 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 100px;
+    a {
+      color: var(--base-black);
+    }
   }
 }
 .header-hide {
-  top: -100px;
+  top: -200px;
 }
 </style>

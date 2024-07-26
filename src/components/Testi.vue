@@ -1,6 +1,6 @@
 <template>
   <div class="bg"></div>
-  <div class="testi">
+  <div id="testimony" class="testi">
     <div class="sub-title">
       <h2>What did<font color="#FFD116"> They </font>say?</h2>
       <p>Our past clients satisfaction score for our services</p>
