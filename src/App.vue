@@ -6,6 +6,7 @@ import Testi from './components/Testi.vue';
 import PastProjects from '@/components/PastProjects.vue';
 import JoinUs from './components/JoinUs.vue';
 import ServicesWeProvide from './components/ServicesWeProvide.vue';
+import Footer from '@/components/Footer.vue';
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import ServicesWeProvide from './components/ServicesWeProvide.vue';
   <JoinUs />
   <ServicesWeProvide />
   <PastProjects />
+  <Footer />
 </template>
 
 <style scoped></style>

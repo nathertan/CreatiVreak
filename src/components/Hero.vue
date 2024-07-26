@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+const goToBelow = () => {
+  let element = document.getElementById('about-us');
+  let top = element.offsetTop;
+  window.scrollTo(0, top);
+  console.log('goToBelow', top);
+};
+</script>
 
 <template>
   <div class="hero">
@@ -11,7 +18,7 @@
     <p class="subtitle">
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </p>
-    <div class="more">
+    <div class="more" @click="goToBelow()">
       <p>Pelajari lebih lanjut</p>
       <img alt="chevron below" class="chevron" src="@assets/chevronBelow.svg" />
     </div>

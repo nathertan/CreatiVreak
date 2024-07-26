@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="yellow">
+  <div id="join-us" class="yellow">
     <h2 class="title">
       Interested in Becoming our <font color="#204c74">Talent</font>?
     </h2>
