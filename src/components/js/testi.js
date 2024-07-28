@@ -6,10 +6,41 @@ export default {
       viewed: [],
       index: 0,
       intervalId: null,
-      images: ['/img/a.png', '/img/b.png', '/img/c.jpg', '/img/d.png'],
+      images: [{
+        img: '/img/fitbreak.jpg',
+        name: 'Fitbreak',
+        reviewer: '- Anggelia',
+        text: 'Hasil video dan foto sudah bagus dan menarik. Teknik pengambilan gambar juga sudah baik. Tim sangat kooperatif karena mendengarkan dan bisa mewujudkan permintaan klien.'
+      },
+      {
+        img: '/img/lyscent.jpg',
+        text: 'Oke banget sih kerjanya. Terakhir pake jasa event dan photographynya Creativreak dan hasilnya sesuai ekspetasi. Hasilnya juga cepet keluar, dan yang paling penting budgetnya sesuai...',
+        name: 'Ly\'Scent',
+        reviewer: '- Lynea'
+
+      },
+      {
+        img: '/img/maven.jpg',
+        name: 'PT. Maven Kreatif Gemintang',
+        reviewer: '- Liyen',
+        text: 'Buat Creativreak, talentnya bagus bagus dan saling mau kerjasama dan saling support, Thank you Creativreak!'
+      },
+      {
+        img: '/img/soulfashion.jpg',
+        name: 'Soulfashion',
+        reviewer: '- Fallencia',
+        text: 'Konten yang dibuat untuk soulfashion sudah cukup bagus dan dari tone warna juga sudah oke🫶🏻'
+      },
+      {
+        img: '/img/healthygo.jpg',
+        name: 'Healthy Go',
+        reviewer: '- Rian Allaam',
+        text: 'fast response banget, good work, good team. '
+      }],
       viewedCount: 2,
       duration: 3500,
-      direction: 'left'
+      direction: 'left',
+      width: window.innerWidth
     }
   },
   methods: {
@@ -47,10 +78,24 @@ export default {
           done()
         }
       })
+    },
+    handleResize() {
+      this.width = window.innerWidth;
+      if (this.width < 1280 && this.width > 768) {
+        this.viewedCount = 3;
+      } else {
+        this.viewedCount = 2;
+      }
+      clearInterval(this.intervalId)
+      this.render();
     }
   },
 
   mounted() {
+    if (window.innerWidth < 1280 && this.width > 768) {
+      this.viewedCount = 3;
+    }
+    window.addEventListener('resize', this.handleResize);
     if (this.images.length) {
       clearInterval(this.intervalId)
       this.render();
@@ -58,13 +103,5 @@ export default {
   },
   unmounted() {
     this.interval && clearInterval(this.intervalId);
-  },
-  watch: {
-    'images.length': function () {
-      if (this.images.length) {
-        clearInterval(this.intervalId);
-        this.render()
-      }
-    }
-  },
+  }
 }

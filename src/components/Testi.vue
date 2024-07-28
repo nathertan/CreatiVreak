@@ -14,10 +14,13 @@
       @leave="onLeave"
     >
       <li v-for="img in viewed" class="item" :key="img" :data-index="'index'">
-        <img :src="img" alt="" class="item-img" />
+        <img :src="img.img" alt="" class="item-img" />
         <div class="item-desc">
-          <b>Amanda Zahra</b>
-          <p>Testimonial asdassad asdasdasd asdas</p>
+          <div class="item-desc-wrapper">
+            <b>{{ img.name }}</b>
+            <p>{{ img.text }}</p>
+          </div>
+          <p class="item-desc-reviewer">{{ img.reviewer }}</p>
         </div>
       </li>
     </TransitionGroup>
@@ -31,7 +34,7 @@
   z-index: 1;
   position: absolute;
   width: 50%;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(
     270deg,
     rgba(241, 241, 241, 0) 0.13%,
@@ -52,7 +55,6 @@
 }
 
 .testi {
-  margin-top: 10rem;
   /* display: flex;
   justify-content: space-between; */
   padding: 80px 100px 0 100px;
@@ -76,28 +78,45 @@
   transition: all 1s ease-in-out;
   &-img {
     width: 13vw;
-    height: 32vh;
+    height: 14vw;
     object-fit: cover;
     border-radius: 15px;
     margin-top: 38px;
-    margin-bottom: -180px;
+    margin-bottom: -50%;
   }
   &-desc {
     z-index: -1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 18vw;
     height: 50vh;
-    padding-top: 200px;
+    padding: 0 1vw;
+    padding-top: 20vh;
     background-color: #fff;
     border-radius: 54px;
     box-shadow: 5px 2px 27.4px 0px rgba(0, 0, 0, 0.25);
-    b {
-      font-size: 1.5rem;
+    &-wrapper {
+      padding-top: 5vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      b {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-align: center;
+      }
     }
-    p {
+    &-reviewer {
+      margin-top: 1rem;
       font-size: 1rem;
+      color: #9b9b9b;
+      padding-bottom: 10vh;
     }
   }
 }
@@ -117,25 +136,36 @@
   transform: translateX(-30px);
 }
 
-/* .list-move,
-.list-enter-active,
-.list-leave-active {
-  transition: all 1s ease;
+@media screen and (max-width: 1560px) {
+  .item-desc {
+    height: 60vh;
+    padding-top: 15vh;
+  }
 }
 
-.list-enter-active {
-  transform: translateX(80px);
-  transition: all 0ms ease-in;
+@media screen and (max-width: 1280px) {
+  .testi {
+    margin-top: 0;
+  }
+  .sub-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .bg {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  .container {
+    right: calc(21.5vw - 6rem);
+  }
 }
-.list-enter-from {
-  opacity: 0;
-  transform: translateX(30px);
+
+@media screen and (max-width: 768px) {
+  .container {
+    right: calc(30vw - 4rem);
+  }
 }
-.list-leave-to {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-.list-leave-active {
-  position: absolute;
-} */
 </style>

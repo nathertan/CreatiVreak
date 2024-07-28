@@ -27,7 +27,7 @@
   }
 }
 .image-container {
-  padding: 0 22rem;
+  padding: 0 18vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -37,7 +37,7 @@
 }
 
 .image-content {
-  margin: 3rem;
+  margin: 5vh 1vw;
   width: 15vw;
   height: 22vh;
   background-color: var(--base-yellow);
@@ -56,6 +56,7 @@
   }
   h3 {
     text-align: center;
+    font-size: 1rem;
   }
 
   &:hover {
@@ -72,12 +73,12 @@
     p {
       display: block;
       color: var(--base-white);
-      font-size: 1.2rem;
+      font-size: 0.7rem;
     }
   }
 
   img {
-    width: 4rem;
+    width: 3vw;
   }
 }
 </style>

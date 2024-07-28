@@ -90,4 +90,17 @@ header {
 .header-hide {
   top: -200px;
 }
+
+@media screen and (max-width: 1080px) {
+  header {
+    .wrapper {
+      gap: 3vw;
+    }
+  }
+  .title {
+    h2 {
+      display: none;
+    }
+  }
+}
 </style>
