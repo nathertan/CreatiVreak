@@ -62,11 +62,11 @@
 <style lang="scss" scoped>
 footer {
   background-color: var(--base-blue);
-  padding: 5% 5% 2% 5%;
+  padding: 5vh 5vw 2vh 5vw;
   .copy-rights {
-    margin-top: 5rem;
+    margin-top: 2rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #bababa;
     font-weight: 500;
     line-height: 1.25;
@@ -88,11 +88,11 @@ footer {
   margin-right: 10%;
   width: 20vw;
   img {
-    width: 5rem;
+    width: 3rem;
     margin: 0 0 0.5rem 0;
   }
   p {
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #bababa;
     font-weight: 500;
     line-height: 1.25;
@@ -104,14 +104,15 @@ footer {
   width: 15vw;
   h3 {
     color: #bababa;
-    font-size: 1.75rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin: 0 0 1rem 0;
   }
   a {
     color: #bababa;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 500;
+    line-height: 1.5rem;
   }
 }
 .contact {
@@ -120,13 +121,14 @@ footer {
   width: 18vw;
   h3 {
     color: #bababa;
-    font-size: 1.75rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin: 0 0 1rem 0;
   }
   a {
     color: #bababa;
-    font-size: 1rem;
+    font-size: 0.75rem;
+    line-height: 0.5rem;
   }
   &-info {
     display: flex;
@@ -137,10 +139,32 @@ footer {
       margin-right: 0.5rem;
     }
     p {
-      font-size: 1rem;
+      font-size: 0.75rem;
       color: #bababa;
       line-height: 1.25;
       margin: 0 0 0 0.5rem;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .right-side {
+    display: none;
+  }
+  .title {
+    p {
+      display: none;
+    }
+  }
+  footer {
+    .copy-rights {
+      margin-top: 1rem;
+      font-size: 0.7rem;
+    }
+  }
+  .title {
+    img {
+      width: 2rem;
+      margin: 0 0 0.5rem 0;
     }
   }
 }

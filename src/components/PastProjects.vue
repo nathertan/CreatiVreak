@@ -100,13 +100,13 @@
 }
 
 .item-img {
-  height: 380px;
-  width: 220px;
+  height: 50vh;
+  width: 14vw;
   object-fit: cover;
   border-radius: 15px;
   &-h {
-    height: 320px;
-    width: 480px;
+    height: 40vh;
+    width: 30vw;
   }
 }
 </style>
@@ -114,8 +114,8 @@
 <style>
 .v-carousel__controls__item.v-btn.v-btn--icon {
   background-color: var(--base-white) !important;
-  height: 7px !important;
-  width: 85px !important;
+  height: 1vh !important;
+  width: 5vw !important;
   border-radius: 0 !important;
 }
 
@@ -135,6 +135,6 @@
   display: none !important; /* Removes the default icon */
 }
 .v-carousel {
-  height: 560px !important;
+  height: 72vh !important;
 }
 </style>

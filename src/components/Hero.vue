@@ -34,12 +34,13 @@ const goToBelow = () => {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  line-height: 6.5rem;
-  font-size: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 3.75rem;
 }
 
 .subtitle {
-  margin-top: 1.2rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .bg-content {
@@ -59,6 +60,46 @@ const goToBelow = () => {
   align-items: center;
   .chevron {
     width: 41px;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1530px) {
+  .bg-content {
+    width: 50vw;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .bg-content {
+    display: none;
+  }
+  .title {
+    margin-top: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    div {
+      text-align: center;
+    }
+  }
+  .subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .title {
+    margin-top: 5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .more {
+    width: calc(100vw - 200px);
   }
 }
 </style>
