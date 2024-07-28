@@ -45,7 +45,7 @@
 
 <style lang="scss" scoped>
 .past-projects {
-  padding: 8vh 100px 0 100px;
+  padding: 8vh 10vw 0 10vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -109,6 +109,48 @@
     width: 30vw;
   }
 }
+
+@media screen and (max-width: 1175px) {
+  .item-img {
+    height: 18rem;
+    width: 12rem;
+  }
+  .item-wrapper {
+    gap: 3vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    margin-top: 0;
+  }
+  .item-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+    margin-top: 0;
+
+    &-h {
+      margin-top: 0rem;
+      text-align: center;
+    }
+
+    &-title {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--base-blue);
+      text-align: center;
+    }
+    &-desc {
+      margin-top: 1rem;
+      color: var(--base-black);
+      text-align: center;
+      margin-bottom: 2vh;
+    }
+  }
+}
 </style>
 
 <style>
@@ -136,5 +178,19 @@
 }
 .v-carousel {
   height: 72vh !important;
+}
+
+@media screen and (max-width: 1175px) {
+  .v-window__controls {
+    display: none !important;
+  }
+  .v-carousel__controls {
+    gap: 0 !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .v-window-item--active {
+    margin-top: 0 !important;
+  }
 }
 </style>

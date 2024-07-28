@@ -78,7 +78,7 @@ const goToBelow = () => {
     display: none;
   }
   .title {
-    margin-top: 16rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -90,10 +90,15 @@ const goToBelow = () => {
   .subtitle {
     text-align: center;
   }
+  .more {
+    p {
+      font-size: 1rem;
+    }
+  }
 }
 @media screen and (max-width: 640px) {
   .title {
-    margin-top: 5rem;
+    margin-top: 2rem;
     font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: 3rem;

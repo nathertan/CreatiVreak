@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, defineProps } from 'vue';
+import { onMounted } from 'vue';
 const props = defineProps({
   show: Boolean,
 });
