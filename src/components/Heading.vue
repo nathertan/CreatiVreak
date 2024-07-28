@@ -64,10 +64,11 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 4;
 }
 .hamburger {
   display: none;
+  z-index: 4;
 }
 .title {
   display: flex;
@@ -113,6 +114,11 @@ header {
   }
 }
 @media screen and (max-width: 640px) {
+  .title {
+    img {
+      width: 10vw;
+    }
+  }
   header {
     padding: 3vh 5vw 3vh;
   }
@@ -122,7 +128,7 @@ header {
   .hamburger {
     display: block;
     img {
-      width: 6vw;
+      width: 10vw;
     }
   }
 }

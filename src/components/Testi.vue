@@ -159,13 +159,47 @@
     height: 0;
   }
   .container {
-    right: calc(21.5vw - 6rem);
+    right: calc(10vw - 4rem);
+  }
+  .item {
+    &-desc {
+      width: 40vw;
+      height: 50vh;
+      padding-top: 10vh;
+    }
+    &-img {
+      margin-bottom: -15vh;
+      border: #e0e0e0 solid 3px;
+    }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
+  .testi {
+    padding: 5vh 10vw 5vh 10vw;
+    height: 100vh;
+  }
+  .sub-title {
+    p {
+      padding-bottom: 5vh;
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .item {
+    margin: -2rem 0.5rem 0 0.5rem;
+    &-desc {
+      height: 70vh;
+    }
+  }
   .container {
-    right: calc(30vw - 4rem);
+    right: calc(10vw - 1rem);
+  }
+  .sub-title {
+    p {
+      padding-bottom: 10vh;
+    }
   }
 }
 </style>

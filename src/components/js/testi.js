@@ -80,21 +80,12 @@ export default {
       })
     },
     handleResize() {
-      this.width = window.innerWidth;
-      if (this.width < 1280 && this.width > 768) {
-        this.viewedCount = 3;
-      } else {
-        this.viewedCount = 2;
-      }
       clearInterval(this.intervalId)
       this.render();
     }
   },
 
   mounted() {
-    if (window.innerWidth < 1280 && this.width > 768) {
-      this.viewedCount = 3;
-    }
     window.addEventListener('resize', this.handleResize);
     if (this.images.length) {
       clearInterval(this.intervalId)
