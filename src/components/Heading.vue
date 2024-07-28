@@ -1,8 +1,10 @@
 <script setup>
+import SideBar from './SideBar.vue';
 import { ref, onMounted } from 'vue';
 
 const scrollDirection = ref('up');
 const lastScroll = ref(0);
+const showSideBar = ref(false);
 onMounted(() => {
   window.addEventListener('scroll', () => {
     if (window.scrollY > lastScroll.value) {
@@ -14,9 +16,13 @@ onMounted(() => {
     }
   });
 });
+const toggleSidebar = () => {
+  showSideBar.value = !showSideBar.value;
+};
 </script>
 
 <template>
+  <side-bar :show="showSideBar" @toggleSidebar="toggleSidebar" />
   <header
     :class="{
       'header-hide': scrollDirection === 'down',
@@ -39,6 +45,9 @@ onMounted(() => {
       <a href="#our-services">Service</a>
       <a href="#past-projects">Portofolio</a>
     </div>
+    <div class="hamburger" @click="toggleSidebar">
+      <img src="@assets/hamburger.svg" alt="hamburger-toggle" />
+    </div>
   </header>
 </template>
 
@@ -56,35 +65,37 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 3;
-
-  .title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    img {
-      margin-right: 0.75rem;
-    }
-
-    h2 {
-      font-size: 1.7rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .creati {
-      color: var(--base-blue);
-    }
-    .vreak {
-      color: var(--base-yellow);
-    }
+}
+.hamburger {
+  display: none;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    margin-right: 0.75rem;
   }
 
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 100px;
-    a {
-      color: var(--base-black);
-    }
+  h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .creati {
+    color: var(--base-blue);
+  }
+  .vreak {
+    color: var(--base-yellow);
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  a {
+    color: var(--base-black);
   }
 }
 .header-hide {
@@ -92,14 +103,26 @@ header {
 }
 
 @media screen and (max-width: 1080px) {
-  header {
-    .wrapper {
-      gap: 3vw;
-    }
+  .wrapper {
+    gap: 3vw;
   }
   .title {
     h2 {
       display: none;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  header {
+    padding: 3vh 5vw 3vh;
+  }
+  .wrapper {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    img {
+      width: 6vw;
     }
   }
 }
