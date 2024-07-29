@@ -188,9 +188,10 @@
 
 @media screen and (max-width: 510px) {
   .item {
-    margin: -2rem 0.5rem 0 0.5rem;
+    margin: 0rem 1rem 0 1rem;
     &-desc {
-      height: 70vh;
+      height: 50vh;
+      width: 35vh;
     }
   }
   .container {
