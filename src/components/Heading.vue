@@ -120,7 +120,7 @@ header {
     }
   }
   header {
-    padding: 3vh 5vw 3vh;
+    padding: 2vh 5vw 3vh;
   }
   .wrapper {
     display: none;
