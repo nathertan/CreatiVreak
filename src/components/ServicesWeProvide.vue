@@ -109,7 +109,8 @@
       display: none;
       color: var(--base-yellow);
       text-align: center;
-      padding: -1rem 1rem 0rem 1rem;
+      padding: 0rem 0.5rem 0rem 0.5rem;
+      margin: 0;
     }
     h3 {
       text-align: center;
@@ -118,6 +119,25 @@
     img {
       width: 10vw;
     }
+
+    &:hover {
+      background-color: var(--base-blue);
+      color: var(--base-yellow);
+      h3 {
+        color: var(--base-white);
+        display: none;
+      }
+      img {
+        filter: invert(100%);
+        display: none;
+      }
+      p {
+        display: block;
+        color: var(--base-white);
+        font-size: 0.7rem;
+      }
+    }  
+
   } 
 
 }
