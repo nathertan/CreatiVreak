@@ -57,6 +57,7 @@ export default {
       this.viewed.pop();
     },
     render() {
+      this.width = window.innerWidth;
       this.viewed = this.images.slice(0, this.viewedCount);
       this.index = this.viewedCount;
       this.intervalId = setInterval(() => {
@@ -80,12 +81,20 @@ export default {
       })
     },
     handleResize() {
+      if (this.width < 510) {
+        this.viewedCount = 1;
+      } else {
+        this.viewedCount = 2;
+      }
       clearInterval(this.intervalId)
       this.render();
     }
   },
 
   mounted() {
+    if (this.width < 510) {
+      this.viewedCount = 1;
+    }
     window.addEventListener('resize', this.handleResize);
     if (this.images.length) {
       clearInterval(this.intervalId)
