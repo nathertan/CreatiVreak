@@ -11,7 +11,7 @@ const goToBelow = () => {
   <div class="hero">
     <img alt="Hero BG Content" class="bg-content" src="@assets/heroBg.png" />
     <h1 class="title">
-      <div><font color="#FFD116">Creativ </font>Solution</div>
+      <div><font color="#FFD116">Creativ&nbsp;</font>Solutions</div>
       <div>for your</div>
       <div><font color="#204C74">Digital&nbsp;</font>Needs</div>
     </h1>
