@@ -16,10 +16,10 @@ const goToBelow = () => {
       <div><font color="#204C74">Digital&nbsp;</font>Needs</div>
     </h1>
     <p class="subtitle">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      That turns your ideas into <b>Reality</b> and <b>Beyond</b>
     </p>
     <div class="more" @click="goToBelow()">
-      <p>Pelajari lebih lanjut</p>
+      <p>Scroll for more</p>
       <img alt="chevron below" class="chevron" src="@assets/chevronBelow.svg" />
     </div>
   </div>
@@ -40,7 +40,7 @@ const goToBelow = () => {
 
 .subtitle {
   margin-top: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .bg-content {
