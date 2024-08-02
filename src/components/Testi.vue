@@ -84,6 +84,7 @@
     border-radius: 15px;
     margin-top: 38px;
     margin-bottom: -50%;
+    background-color: #ffffff;
   }
   &-desc {
     z-index: -1;
