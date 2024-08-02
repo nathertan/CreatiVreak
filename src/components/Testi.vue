@@ -59,6 +59,7 @@
   justify-content: space-between; */
   padding: 80px 100px 0 100px;
   height: 100vh;
+  width: 100vw;
 }
 
 .container {
@@ -159,7 +160,9 @@
     height: 0;
   }
   .container {
-    right: calc(10vw - 4rem);
+    right: calc(10vw - 6rem);
+    overflow-x: hidden;
+    padding: 2rem;
   }
   .item {
     &-desc {
@@ -190,17 +193,28 @@
   .item {
     margin: 0rem 1rem 0 1rem;
     &-desc {
-      height: 50vh;
-      width: 35vh;
+      height: 55vh;
+      width: 70vw;
+      padding-top: 15vh;
     }
-  }
-  .container {
-    right: calc(10vw - 1rem);
+    &-img {
+      width: 30vw;
+      height: 32vw;
+    }
   }
   .sub-title {
     p {
-      padding-bottom: 10vh;
+      padding-bottom: 0;
     }
+  }
+  .container {
+    right: calc(4vw);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    right: calc(-1vw);
   }
 }
 </style>
