@@ -16,7 +16,7 @@
 
 <style lang="scss" scoped>
 .service-provided {
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   padding-top: 10vh;
@@ -91,6 +91,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0, 0rem;
+    
   }
 
   .image-content {
@@ -114,7 +115,8 @@
     }
     h3 {
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
     }
     img {
       width: 10vw;

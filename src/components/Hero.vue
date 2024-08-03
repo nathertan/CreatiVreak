@@ -16,10 +16,10 @@ const goToBelow = () => {
       <div><font color="#204C74">Digital&nbsp;</font>Needs</div>
     </h1>
     <p class="subtitle">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      That turns your ideas into <b>Reality</b> and <b>Beyond</b>.
     </p>
     <div class="more" @click="goToBelow()">
-      <p>Pelajari lebih lanjut</p>
+      <p>Scroll for more</p>
       <img alt="chevron below" class="chevron" src="@assets/chevronBelow.svg" />
     </div>
   </div>
@@ -27,7 +27,7 @@ const goToBelow = () => {
 
 <style lang="scss" scoped>
 .hero {
-  padding: 80px 100px 0 100px;
+  padding: 80px 80px 0 80px;
   height: 100vh;
 }
 .title {
@@ -40,7 +40,7 @@ const goToBelow = () => {
 
 .subtitle {
   margin-top: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .bg-content {
@@ -98,13 +98,12 @@ const goToBelow = () => {
 }
 @media screen and (max-width: 640px) {
   .title {
+    width: 100%;
     margin-top: 2rem;
     font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: 3rem;
-  }
-  .more {
-    width: calc(100vw - 200px);
+    text-align: center;
   }
 }
 </style>

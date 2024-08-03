@@ -20,7 +20,7 @@ export default {
 
       },
       {
-        img: '/img/maven.jpg',
+        img: '/img/maven.png',
         name: 'PT. Maven Kreatif Gemintang',
         reviewer: '- Liyen',
         text: 'Buat Creativreak, talentnya bagus bagus dan saling mau kerjasama dan saling support, Thank you Creativreak!'
