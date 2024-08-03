@@ -16,7 +16,10 @@ const goToBelow = () => {
       <div><font color="#204C74">Digital&nbsp;</font>Needs</div>
     </h1>
     <p class="subtitle">
-      That turns your ideas into <b>Reality</b> and <b>Beyond</b>
+
+      That turns your ideas into <b>Reality</b> and <b>Beyond</b>.
+
+
     </p>
     <div class="more" @click="goToBelow()">
       <p>Scroll for more</p>
@@ -27,7 +30,7 @@ const goToBelow = () => {
 
 <style lang="scss" scoped>
 .hero {
-  padding: 80px 100px 0 100px;
+  padding: 80px 80px 0 80px;
   height: 100vh;
 }
 .title {
@@ -98,13 +101,12 @@ const goToBelow = () => {
 }
 @media screen and (max-width: 640px) {
   .title {
+    width: 100%;
     margin-top: 2rem;
     font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: 3rem;
-  }
-  .more {
-    width: calc(100vw - 200px);
+    text-align: center;
   }
 }
 </style>
