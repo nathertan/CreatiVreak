@@ -16,7 +16,10 @@ const goToBelow = () => {
       <div><font color="#204C74">Digital&nbsp;</font>Needs</div>
     </h1>
     <p class="subtitle">
+
       That turns your ideas into <b>Reality</b> and <b>Beyond</b>.
+
+
     </p>
     <div class="more" @click="goToBelow()">
       <p>Scroll for more</p>
