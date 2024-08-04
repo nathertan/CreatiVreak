@@ -11,7 +11,7 @@ const goToBelow = () => {
   <div class="hero">
     <img alt="Hero BG Content" class="bg-content" src="@assets/heroBg.png" />
     <h1 class="title">
-      <div><font color="#FFD116">Creativ&nbsp;</font>Solutions</div>
+      <div><font color="#FFD116">Creative&nbsp;</font>Solutions</div>
       <div>for your</div>
       <div><font color="#204C74">Digital&nbsp;</font>Needs</div>
     </h1>
@@ -30,7 +30,7 @@ const goToBelow = () => {
 
 <style lang="scss" scoped>
 .hero {
-  padding: 80px 80px 0 80px;
+  padding: 80px 10vw 0 10vw;
   height: 100vh;
 }
 .title {
@@ -57,7 +57,7 @@ const goToBelow = () => {
 .more {
   position: absolute;
   bottom: 3rem;
-  width: calc(100vw - 150px);
+  width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;

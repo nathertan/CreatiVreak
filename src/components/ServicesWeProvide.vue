@@ -23,7 +23,7 @@
   align-items: center;
 
   p {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 .image-container {
