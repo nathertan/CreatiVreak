@@ -31,7 +31,7 @@ export default {
         {
           src: '/img/portofolio/LEEVIERRA.PNG',
           title: 'Leevierra (2023)',
-          description: 'Leevierra Videography',
+          description: 'LeeVierra Active (PT Busana Aktif Mandiri) content video',
         },
         {
           src: '/img/portofolio/CTBC.jpg',
@@ -47,7 +47,7 @@ export default {
         {
           src: '/img/portofolio/HEALTHY GO.PNG',
           title: 'Healthy Go (2024)',
-          description: 'Healthy Go video content talent',
+          description: 'Talent for Healthy Go Advertisement',
         }
       ],
     }
