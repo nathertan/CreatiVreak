@@ -7,7 +7,7 @@
     </h2>
     <p class="subtitle">Contribute and create wonderful projects with us!</p>
     <div class="button-wa">
-      <a href="https://wa.me/6288295219103?text=Halo%20team%20CreatiVreak!%20Mau%20tanya-tanya%20tentang%20cara%20bergabung%20dengan%20team%20Creativreak%20dong!" target="_blank">
+      <a href="https://chat.whatsapp.com/E2C90SUlY0K2QKrN4p4ucd" target="_blank">
         <img
           src="/img/join-us-default.png"
           onmouseover="this.src='/img/join-us-hover.png'"

@@ -26,13 +26,13 @@ export default {
         text: 'Buat Creativreak, talentnya bagus bagus dan saling mau kerjasama dan saling support, Thank you Creativreak!'
       },
       {
-        img: '/img/soulfashion.jpg',
+        img: '/img/soulfashion.jpeg',
         name: 'Soulfashion',
         reviewer: '- Fallencia',
         text: 'Konten yang dibuat untuk soulfashion sudah cukup bagus dan dari tone warna juga sudah oke🫶🏻'
       },
       {
-        img: '/img/healthygo.jpg',
+        img: '/img/healthygo.webp',
         name: 'Healthy Go',
         reviewer: '- Rian Allaam',
         text: 'fast response banget, good work, good team. '
