@@ -10,7 +10,7 @@
       established businesses by advancing their digital promotional endeavors.
     </p>
     <div class="button-wa">
-      <a href="https://www.google.com">
+      <a href="https://wa.me/6288295219103" target="_blank">
         <img
           src="/img/hubungikami-default.png"
           onmouseover="this.src='/img/hubungikami-hover.png'"

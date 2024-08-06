@@ -29,7 +29,7 @@
           <h3>Contact Info</h3>
           <div class="contact-info">
             <img alt="instagram" src="@assets/instagram.svg" />
-            <a href="https://www.instagram.com/creativreak/">@creativreak</a>
+            <a href="https://www.instagram.com/creativreak/ " target="_blank">@creativreak</a>
           </div>
           <div class="contact-info">
             <img alt="email" src="@assets/email.svg" />
@@ -39,15 +39,15 @@
           </div>
           <div class="contact-info">
             <img alt="whatsapp" src="@assets/whatsapp.svg" />
-            <a href="https://wa.me/6288295219103">088295219103</a>
+            <a href="https://wa.me/6288295219103" target="_blank">088295219103</a>
             <p>/&nbsp;</p>
-            <a href="https://wa.me/6285697233850">085697233850</a>
+            <a href="https://wa.me/6285697233850" target="_blank">085697233850</a>
             <p>(Lynea)</p>
           </div>
 
           <div class="contact-info">
             <img alt="whatsapp" src="@assets/whatsapp.svg" />
-            <a href="https://wa.me/6289520688847">089520688847</a>
+            <a href="https://wa.me/6289520688847" target="_blank">089520688847</a>
             <p>(William)</p>
           </div>
         </div>
