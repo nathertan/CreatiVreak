@@ -40,15 +40,11 @@
           <div class="contact-info">
             <img alt="whatsapp" src="@assets/whatsapp.svg" />
             <a href="https://wa.me/6288295219103" target="_blank">088295219103</a>
-            <p>/&nbsp;</p>
-            <a href="https://wa.me/6285697233850" target="_blank">085697233850</a>
-            <p>(Lynea)</p>
           </div>
 
           <div class="contact-info">
-            <img alt="whatsapp" src="@assets/whatsapp.svg" />
-            <a href="https://wa.me/6289520688847" target="_blank">089520688847</a>
-            <p>(William)</p>
+            <img alt="tiktok" src="@assets/tiktok.svg" />
+            <a href="https://www.tiktok.com/@creativreak24?lang=id-ID" target="_blank">Creativreak</a>
           </div>
         </div>
       </div>
