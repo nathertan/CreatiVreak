@@ -16,13 +16,13 @@ const goToBelow = () => {
       <div><font color="#204C74">Digital&nbsp;</font>Needs</div>
     </h1>
     <p class="subtitle">
-
       That turns your ideas into <b>Reality</b> and <b>Beyond</b>.
-
-
     </p>
+    <div class="btn">
+      <button @click="goToBelow()" class="hero-btn">See More</button>
+      <button @click="goToBelow()" class="hero-btn-sec">Contact Us</button>
+    </div>
     <div class="more" @click="goToBelow()">
-      <p>Scroll for more</p>
       <img alt="chevron below" class="chevron" src="@assets/chevronBelow.svg" />
     </div>
   </div>
@@ -32,6 +32,35 @@ const goToBelow = () => {
 .hero {
   padding: 80px 10vw 0 10vw;
   height: 100vh;
+  &-btn {
+    margin-right: 1.75rem;
+    margin-top: 5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 2px;
+    background-color: #204c74;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #ffd116;
+      color: #204c74;
+    }
+    &-sec {
+      margin-right: 2rem;
+      margin-top: 5rem;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 2px;
+      background-color: #ffd116;
+      color: #204c74;
+      font-size: 1.2rem;
+      &:hover {
+        background-color: #204c74;
+        color: white;
+      }
+    }
+  }
 }
 .title {
   margin-top: 5rem;
@@ -77,6 +106,10 @@ const goToBelow = () => {
 }
 
 @media screen and (max-width: 1080px) {
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
   .bg-content {
     display: none;
   }
